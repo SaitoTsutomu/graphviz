@@ -2,6 +2,7 @@ FROM tsutomu7/scientific-python
 
 EXPOSE 8888
 VOLUME $HOME
+ADD graphviz.tgz $HOME
 RUN sudo apt-get update --fix-missing && sudo apt-get install -y --no-install-recommends libltdl7 && \
     conda install -y graphviz && \
     pip install --no-cache graphviz && \
